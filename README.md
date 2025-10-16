@@ -1,70 +1,40 @@
-# EMail-Sender
-📧 Emailing System – Java 17 + Spring Boot  A Spring Boot-based Emailing Application that allows users to send professional emails with attachments (like PDFs, images, etc.) directly from a REST API. Built using Java 17, Spring Boot, and Lombok, this project demonstrates secure email delivery using Gmail SMTP and clean backend architecture.
+# 📧 EMail-Sender
 
-Setup & Installation
+**Emailing System – Java 17 + Spring Boot**
 
-Clone the repository
+A Spring Boot-based Emailing Application that allows users to send professional emails with attachments (like PDFs, images, etc.) directly from a REST API.  
+Built using **Java 17**, **Spring Boot**, and **Lombok**, this project demonstrates secure email delivery using **Gmail SMTP** and a clean backend architecture.
 
-``git clone https://github.com/VivekGits7/EMail-Sender.git
-cd EMail-Sender``
+---
 
-Open in your IDE
-Load it as a Maven (or Gradle) project.
+## 🚀 Features
 
-Build the project
-For Maven:
+- Send plain text or HTML emails via REST API  
+- Add file attachments (PDFs, images, etc.)  
+- Secure Gmail SMTP configuration (TLS/SSL support)  
+- Lightweight and production-ready setup  
+- Easy-to-use email model with Lombok  
+- Centralized error handling and validation  
+- Runs on **Spring Boot 3+ / Java 17**
 
-`mvn clean install`
+---
 
-Or for Gradle:
+## 🛠️ Tech Stack
 
-`./gradlew build`
+| Technology | Description |
+|-------------|-------------|
+| **Java 17** | Programming Language |
+| **Spring Boot** | Application Framework |
+| **Spring Mail (JavaMailSender)** | Email Service Integration |
+| **Lombok** | Boilerplate Code Reduction |
+| **Maven** | Build & Dependency Management |
 
-Run the application
-From IDE or via command line:
+---
 
-`mvn spring-boot:run`
+## ⚙️ Setup & Installation
 
+### 1️⃣ Clone the repository
 
-The application by default will start on port 8080 (unless overridden in configuration).
-
-Configuration
-
-Configuration is done typically in application.properties or `application.yml`. Key properties include:
-
-``spring.mail.host = smtp.gmail.com  
-spring.mail.port = 587  # or 465 for SSL  
-spring.mail.username = your_email@gmail.com  
-spring.mail.password = your_app_password  
-spring.mail.properties.mail.smtp.auth = true  
-spring.mail.properties.mail.smtp.starttls.enable = true  
-spring.mail.properties.mail.smtp.ssl.trust = smtp.gmail.com  ``
-
-Api: To Send email with attachment POST: `localhost:8080/api/email/send`
-
-``{
-  "from": "vivekvish0134@gmail.com",
-  "to": "yuvrajlodhi77@gmail.com",
-  "subject": "Spring Boot Mail Test",
-  "message": "Hi Yuvraj, this is a test email from Spring Boot with PDF attachment!",
-  "filePath": "C:/Users/sandeep/Downloads/Send.pdf"
-}``
-
-**Sending Emails with Attachments**
-The service handles:
-
-Validating input (email format, non-null subject/body)
-
-Building a MimeMessage or MimeMessageHelper
-
-Attaching one or more files
-
-Setting proper content types (text/plain or text/html)
-
-Dispatching via JavaMailSender
-
-If errors arise (e.g. SMTP authentication failure, invalid file), appropriate exception handling ensures meaningful responses.
-
-
-
-
+```bash
+git clone https://github.com/VivekGits7/EMail-Sender.git
+cd EMail-Sender
